@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
+import EpisodesPage from './components/pages/Episodes/EpisodesPage'
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
             <h1>Characters</h1>
           </Route>
           <Route path="/episodes">
-            <h1>Episodes</h1>
+            <EpisodesPage />
           </Route>
           <Route path="/">
             <h1>Home</h1>
