@@ -28,15 +28,17 @@ const CardBox = styled.div`
 background-color: #121212;
 border-radius: 20px;
 margin: 0px 50px 20px 50px;
-padding: 10px 20px 10px 20px;
+padding: 20px 20px 20px 20px;
 display: grid;
 grid-template-columns: auto auto;
 grid-template-rows: auto auto;
+width: 80%;
 `
 
 const Title = styled.div`
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+    margin-bottom: 5px;
 `
 
 const TitleText = styled.h2`
