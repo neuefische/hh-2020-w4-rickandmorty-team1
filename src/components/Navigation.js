@@ -23,6 +23,8 @@ export default function Navigation() {
 
 const NavStyled = styled.nav`
   position: fixed;
+  z-index: 200;
+  background-color: lightpink;
   width: 100vw;
   bottom: 0;
   display: flex;
