@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
+import NavigationStartPage from './components/NavigationStartPage'
 import CharactersPage from './components/pages/CharactersPage'
 
 export default function App() {
@@ -21,8 +22,8 @@ export default function App() {
             <h1>Home</h1>
           </Route>
         </Switch>
-
-        <Navigation />
+        <NavigationStartPage />
+        {/* <Navigation /> */}
       </div>
     </Router>
   )

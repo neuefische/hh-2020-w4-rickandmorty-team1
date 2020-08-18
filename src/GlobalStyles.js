@@ -19,7 +19,6 @@ body {
     background-repeat: no-repeat; 
     background-size: cover;
     height: 100%;
-    padding: 20px 30px;
     
     
     

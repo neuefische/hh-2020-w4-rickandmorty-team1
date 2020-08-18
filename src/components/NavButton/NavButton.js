@@ -27,7 +27,7 @@ const Picture = styled.img`
 `
 const ButtonLabel = styled.div`
   height: 60px;
-  opacity: 0.6;
+  opacity: 0.98;
 
   background: #1c703f;
   display: flex;

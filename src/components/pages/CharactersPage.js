@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ShortBio from '../ShortBio'
-
+import Navigation from '../Navigation'
 export default function CharactersPage() {
   const [character, setCharacter] = useState([])
 
@@ -23,7 +23,12 @@ export default function CharactersPage() {
         )
       )
   }, [])
-  return <div>{character}</div>
+  return (
+    <div>
+      {character}
+      <Navigation />
+    </div>
+  )
 }
 
 // function fetchCharacter() {

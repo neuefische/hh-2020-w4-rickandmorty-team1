@@ -5,32 +5,26 @@ import NavButton from './NavButton/NavButton'
 import img from '../images/btn-episodes2.jpg'
 
 export default function Navigation() {
+  const style = { margin: '20px' }
   return (
     <NavStyled>
-      <NavLink exact activeClassName="isActive" to="/">
-        Home
+      <NavLink style={style} exact activeClassName="isActive" to="/">
+        <NavButton buttonLabel="CHARACTERS" borderPic={img} />
       </NavLink>
-      <NavLink activeClassName="isActive" to="/locations">
-        Locations
+      <NavLink style={style} activeClassName="isActive" to="/locations">
+        <NavButton buttonLabel="EPISODES" borderPic={img} />
       </NavLink>
-      <NavLink activeClassName="isActive" to="/characters">
-        Characters
-      </NavLink>
-      <NavLink activeClassName="isActive" to="/episodes">
-        {/* <NavButton buttonLabel="EPISODES" borderPic={img} /> */}
-        Episodes
+      <NavLink style={style} activeClassName="isActive" to="/characters">
+        <NavButton buttonLabel="LOCATIONS" borderPic={img} />
       </NavLink>
     </NavStyled>
   )
 }
 
 const NavStyled = styled.nav`
-  position: fixed;
-  z-index: 200;
-  background-color: lightpink;
   width: 100vw;
-  bottom: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 20px;
   justify-content: space-evenly;
