@@ -4,6 +4,8 @@ import Navigation from './components/Navigation'
 import CharactersPage from './components/pages/CharactersPage'
 
 export default function App() {
+  //const [activePage, setActivePage] = useState('Home')
+
   return (
     <Router>
       <div className="App">

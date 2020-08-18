@@ -6,6 +6,8 @@ export default createGlobalStyle`
     box-sizing: border-box;
 }
 body {
+    display: grid; 
+   
     margin: 0;
     font-size: 112.5%;
     background-image: url('./images/rick_and_morty_bg.jpg');
@@ -13,6 +15,10 @@ body {
     background-repeat: no-repeat; 
     background-size: cover;
     height: 100%;
-    padding: 20px 30px; 
+ 
+}
+
+main {
+    padding: 10px; 
 }
 `
