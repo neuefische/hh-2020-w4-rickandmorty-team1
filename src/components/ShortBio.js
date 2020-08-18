@@ -13,20 +13,34 @@ export default function ShortBio({
   return (
     <Wrapper>
       <ProfilePictureContainer>
-        <img src={profilePic} />
+        <img src={profilePic} alt="profilepicture" />
       </ProfilePictureContainer>
       <ProfileBioContainer>
-        <Name></Name>
-        <Bio></Bio>
+        <Name>
+          <h2>{name}</h2>
+        </Name>
+        <Bio>
+          <p>
+            {species},<br /> {status}, <br />
+            {gender},<br /> {episodeCount}, <br />
+            {origin}
+          </p>
+        </Bio>
       </ProfileBioContainer>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 10px black;
   display: grid;
+  align-items: flex-start;
+  gap: 20px;
   grid-template-columns: 1fr 2fr;
+  width: max-content;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
 `
 const ProfilePictureContainer = styled.div``
 const ProfileBioContainer = styled.div`
