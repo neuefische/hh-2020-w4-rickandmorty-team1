@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
+import LocationPage from './components/pages/LocationPage'
 
 export default function App() {
   return (
@@ -8,7 +9,7 @@ export default function App() {
       <div className="App">
         <Switch>
           <Route path="/locations">
-            <h1>Locations</h1>
+            <LocationPage />
           </Route>
           <Route path="/characters">
             <h1>Characters</h1>
