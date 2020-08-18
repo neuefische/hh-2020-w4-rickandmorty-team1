@@ -20,11 +20,13 @@ export default function ShortBio({
           <h2>{name}</h2>
         </Name>
         <Bio>
-          <p>
-            {species},<br /> {status}, <br />
-            {gender},<br /> {episodeCount}, <br />
-            {origin}
-          </p>
+          <ul>
+            <li>{species}</li>
+            <li>{status}</li>
+            <li>{gender}</li>
+            <li>{episodeCount}</li>
+            <li>{origin}</li>
+          </ul>
         </Bio>
       </ProfileBioContainer>
     </Wrapper>
@@ -50,4 +52,8 @@ const ProfileBioContainer = styled.div`
 `
 const Name = styled.div``
 
-const Bio = styled.div``
+const Bio = styled.div`
+  ul {
+    list-style: none;
+  }
+`
