@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import ShortBio from '../ShortBio'
-import Navigation from '../Navigation'
-export default function CharactersPage() {
+import CharactersCard from './CharactersCard'
+
+export default function CharactersPage({ setHeadline }) {
   const [character, setCharacter] = useState([])
+
+  setHeadline('Characters')
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character/')
@@ -10,7 +12,7 @@ export default function CharactersPage() {
       .then((data) =>
         setCharacter(
           data.results.map((character) => (
-            <ShortBio
+            <CharactersCard
               profilePic={character.image}
               name={character.name}
               species={character.species}
@@ -23,12 +25,7 @@ export default function CharactersPage() {
         )
       )
   }, [])
-  return (
-    <div>
-      {character}
-      <Navigation />
-    </div>
-  )
+  return <div>{character}</div>
 }
 
 // function fetchCharacter() {
