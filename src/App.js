@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
-import LocationPage from './components/pages/locations/LocationPage'
+import LocationPage from './components/pages/Locations/LocationPage'
 import EpisodesPage from './components/pages/Episodes/EpisodesPage'
 import CharactersPage from './components/pages/CharactersPage'
 import styled from 'styled-components'
 import Header from './components/Header'
-import LocationPage from './components/pages/LocationPage'
 
 export default function App() {
   const [activePage, setActivePage] = useState('Rick and Morty')
