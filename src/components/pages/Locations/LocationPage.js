@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import Location from './Location'
+import Location from './LocationCard'
 import PagesNav from '../../PagesNav'
+import styled from 'styled-components'
 
 export default function LocationPage() {
   const [location, setlocation] = useState([])
@@ -19,10 +20,13 @@ export default function LocationPage() {
       .then((res) => res.json())
       .then((data) => {
         setlocation(data.results)
+        setPages(data.info.pages)
       })
+    fetchPageData(1)
   }
+
   return (
-    <div>
+    <CardsList>
       {location.map((location, index) => (
         <Location
           key={index}
@@ -32,7 +36,14 @@ export default function LocationPage() {
           residents={location.residents.length}
         />
       ))}
+
       <PagesNav pages={pages} onClick={fetchPageData} />
-    </div>
+    </CardsList>
   )
 }
+
+const CardsList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
