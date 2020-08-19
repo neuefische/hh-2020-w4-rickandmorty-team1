@@ -41,7 +41,7 @@ const Wrapper = styled.section`
   align-items: flex-start;
   gap: 20px;
   grid-template-columns: 1fr 2fr;
-  width: max-content;
+  width: auto;
   margin: 20px;
   padding: 20px;
   background-color: lightblue;
