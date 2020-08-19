@@ -22,5 +22,6 @@ const PagesNavIcon = styled.span`
   font-size: 25px;
   padding: 5px 10px 5px 10px;
   border: 1px solid #a0a0a0;
+  cursor: pointer;
 `
 const PagesNavIcons = styled.div``

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import img from './images/rick_and_morty_bg.jpg'
 
 export default createGlobalStyle`
 
@@ -7,12 +8,13 @@ export default createGlobalStyle`
 }
 
 body {
+    width: 200px;
     margin: 0;
     font-size: 112.5%;
-    background-image: url('./images/rick_and_morty_bg.jpg');
-    background-position: center; 
+    background: url('${img}');
     background-repeat: no-repeat; 
     background-size: cover;
     height: 100%;
+    width: 100%;
 }
 `
