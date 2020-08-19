@@ -70,8 +70,8 @@ const TypeText = styled.span`
 `
 
 const Name = styled.div`
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  grid-row: 3;
 `
 
 const NameDescription = styled.span`
@@ -86,7 +86,7 @@ const NameText = styled.span`
 
 const Residents = styled.div`
   grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  grid-row: 2 / 3;
 `
 
 const ResidentsDescription = styled.span`
