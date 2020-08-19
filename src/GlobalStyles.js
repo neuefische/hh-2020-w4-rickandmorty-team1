@@ -7,10 +7,6 @@ export default createGlobalStyle`
     box-sizing: border-box;
 }
 
-html {
-
-    
-}
 body {
     width: 200px;
     margin: 0;
@@ -19,12 +15,5 @@ body {
     background-repeat: no-repeat; 
     background-size: cover;
     height: 100%;
-    
-    
-    
-}
-.App {
-    
-    
 }
 `
