@@ -4,10 +4,6 @@ import styled from 'styled-components'
 export default function Question({ character, loadNextCharacter }) {
   const [onClickFeedback, setOnClickFeedback] = useState()
 
-  useEffect(() => {
-    setOnClickFeedback()
-  }, [character])
-
   function evaluateAnswer(event) {
     if (character.status === event.target.innerHTML) {
       setOnClickFeedback(
@@ -21,11 +17,15 @@ export default function Question({ character, loadNextCharacter }) {
           <AnswerHeadline>Wrong Answer!</AnswerHeadline>
         </Answer>
       )
+
+      loadNextCharacter()
+
+      setTimeout(() => {
+        setOnClickFeedback()
+      }, 2000)
     }
 
-    setTimeout(() => {
-      loadNextCharacter()
-    }, 2000)
+    
   }
 
   return (
@@ -49,6 +49,8 @@ const Answer = styled.div`
   height: 100%;
   z-index: 200;
   display: grid;
+  align-items: center;
+  justify-items: center;
   border-radius: 20px;
 `
 
