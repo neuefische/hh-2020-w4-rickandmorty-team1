@@ -18,6 +18,6 @@ const HeaderStyled = styled.header`
   h1 {
     text-align: center;
     margin: 0%;
-    font-size: 200%200%;
+    font-size: 200%;
   }
 `

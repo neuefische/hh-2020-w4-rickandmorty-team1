@@ -5,6 +5,7 @@ export default createGlobalStyle`
 * {
     box-sizing: border-box;
 }
+
 body {
     display: grid; 
    
@@ -15,10 +16,5 @@ body {
     background-repeat: no-repeat; 
     background-size: cover;
     height: 100%;
- 
-}
-
-main {
-    padding: 10px; 
 }
 `
