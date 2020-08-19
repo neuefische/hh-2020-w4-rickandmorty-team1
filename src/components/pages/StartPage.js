@@ -1,5 +1,7 @@
 import React from 'react'
+import NavigationStartPage from '../NavigationStartPage'
 
 export default function StartPage() {
-  return <div></div>
+  const style = { margin: '500px' }
+  return <NavigationStartPage style={style} />
 }
