@@ -4,6 +4,7 @@ import Navigation from './components/Navigation'
 import EpisodesPage from './components/pages/Episodes/EpisodesPage'
 import CharactersPage from './components/pages/CharactersPage'
 import styled from 'styled-components'
+import Game from './components/pages/game/GamePage'
 
 export default function App() {
   return (
@@ -19,6 +20,9 @@ export default function App() {
             </Route>
             <Route path="/episodes">
               <EpisodesPage />
+            </Route>
+            <Route path="/game">
+              <Game />
             </Route>
             <Route path="/">
               <h1>Home</h1>
