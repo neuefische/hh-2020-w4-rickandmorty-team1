@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react' 
 import styled from 'styled-components'
+import Question from './Question'
 
 export default function GamePage () {
   const [characters, setCharacters] = useState([])
@@ -11,7 +12,10 @@ export default function GamePage () {
       .then((data) => {
         setCharacters(data.results)
         setcurrentCharacter(data.results[1])
-        console.log(data.results)
+        console.log(data.results[1].image)
       })
   }, [])
+
+  return <Question character={currentCharacter} />
+
 }
