@@ -4,14 +4,14 @@ import PagesNav from '../../PagesNav'
 import styled from 'styled-components'
 
 export default function LocationPage() {
-  const [location, setlocation] = useState([])
+  const [locations, setlocations] = useState([])
   const [pages, setPages] = useState()
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/location/')
       .then((res) => res.json())
       .then((data) => {
-        setlocation(data.results)
+        setlocations(data.results)
         setPages(data.info.pages)
       })
   }, [])
@@ -19,24 +19,29 @@ export default function LocationPage() {
     fetch('https://rickandmortyapi.com/api/location/?page=' + page)
       .then((res) => res.json())
       .then((data) => {
-        setlocation(data.results)
+        setlocations(data.results)
         setPages(data.info.pages)
       })
     fetchPageData(1)
   }
 
+  const LocationsCards = []
+
+  locations.forEach((location, index) =>
+    LocationsCards.push(
+      <Location
+        key={index}
+        name={location.name}
+        type={location.type}
+        dimension={location.dimension}
+        residents={location.residents.length}
+      />
+    )
+  )
+
   return (
     <CardsList>
-      {location.map((location, index) => (
-        <Location
-          key={index}
-          name={location.name}
-          type={location.type}
-          dimension={location.dimension}
-          residents={location.residents.length}
-        />
-      ))}
-
+      {LocationsCards}
       <PagesNav pages={pages} onClick={fetchPageData} />
     </CardsList>
   )
