@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import ShortBio from '../ShortBio'
 
-export default function CharactersPage() {
+export default function CharactersPage({ setHeadline }) {
   const [character, setCharacter] = useState([])
+
+  setHeadline('Characters')
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character/')

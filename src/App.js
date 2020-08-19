@@ -1,30 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import EpisodesPage from './components/pages/Episodes/EpisodesPage'
 import CharactersPage from './components/pages/CharactersPage'
 import styled from 'styled-components'
+import Header from './components/Header'
+import LocationPage from './components/pages/LocationPage'
 
 export default function App() {
-  //const [activePage, setActivePage] = useState('Home')
+  const [activePage, setActivePage] = useState('Rick and Morty')
 
   return (
     <Router>
       <div className="App">
+        <Header text={activePage} />
         <Main>
           <Switch>
             <Route path="/locations">
-              <h1>Locations</h1>
+              <LocationPage />
             </Route>
             <Route path="/characters">
-              <CharactersPage />
+              <CharactersPage setHeadline={setActivePage} />
             </Route>
             <Route path="/episodes">
-              <EpisodesPage />
+              <EpisodesPage setHeadline={setActivePage} />
             </Route>
-            <Route path="/">
-              <h1>Home</h1>
-            </Route>
+            <Route path="/"></Route>
           </Switch>
         </Main>
 
@@ -36,4 +37,5 @@ export default function App() {
 
 const Main = styled.main`
   padding-bottom: 70px;
+  padding-top: px;
 `
