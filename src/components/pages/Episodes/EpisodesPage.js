@@ -3,9 +3,11 @@ import Card from './EpisodeCard'
 import PagesNav from '../../PagesNav'
 import styled from 'styled-components'
 
-function EpisodesPage() {
+function EpisodesPage({ setHeadline }) {
   const [episodes, setEpisodes] = useState([])
   const [pages, setPages] = useState()
+
+  setHeadline('Episodes')
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/episode')
@@ -16,7 +18,7 @@ function EpisodesPage() {
       })
   }, [])
 
-  function fetchPageData (page) {
+  function fetchPageData(page) {
     fetch('https://rickandmortyapi.com/api/episode?page=' + page)
       .then((res) => res.json())
       .then((data) => {
@@ -26,19 +28,18 @@ function EpisodesPage() {
 
   return (
     <CardsList>
-    {episodes.map((card) => (
-      <Card
-        key={card.episode}
-        title={card.name}
-        date={card.air_date}
-        episode={card.episode}
-      />
-    ))}
+      {episodes.map((card) => (
+        <Card
+          key={card.episode}
+          title={card.name}
+          date={card.air_date}
+          episode={card.episode}
+        />
+      ))}
 
-    <PagesNav pages={pages} onClick={fetchPageData}/>
-   </CardsList>
+      <PagesNav pages={pages} onClick={fetchPageData} />
+    </CardsList>
   )
-    
 }
 
 export default EpisodesPage

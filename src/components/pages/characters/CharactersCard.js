@@ -1,7 +1,9 @@
 import React from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
+import {Card, Text} from '../../ui/card/styledCardComponents'
 
-export default function ShortBio({
+
+export default function CharactersCard({
   profilePic,
   name,
   species,
@@ -11,25 +13,25 @@ export default function ShortBio({
   origin,
 }) {
   return (
-    <Wrapper>
+    <Card>
       <ProfilePictureContainer>
         <img src={profilePic} alt="profilepicture" />
       </ProfilePictureContainer>
       <ProfileBioContainer>
-        <Name>
+        <Text>
           <h2>{name}</h2>
-        </Name>
+        </Text>
         <Bio>
           <ul>
-            <li>{species}</li>
-            <li>{status}</li>
-            <li>{gender}</li>
-            <li>{episodeCount}</li>
-            <li>{origin}</li>
+            <li><Text>{species}</Text></li>
+            <li><Text>{status}</Text></li>
+            <li><Text>{gender}</Text></li>
+            <li><Text>{episodeCount}</Text></li>
+            <li><Text>{origin}</Text></li>
           </ul>
         </Bio>
       </ProfileBioContainer>
-    </Wrapper>
+    </Card>
   )
 }
 
@@ -39,7 +41,7 @@ const Wrapper = styled.section`
   align-items: flex-start;
   gap: 20px;
   grid-template-columns: 1fr 2fr;
-  width: max-content;
+  width: auto;
   margin: 20px;
   padding: 20px;
   background-color: lightblue;
