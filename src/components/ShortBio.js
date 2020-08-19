@@ -1,5 +1,7 @@
 import React from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
+import {Card, Headline, Text, Description} from './ui/card/styledCardComponents'
+
 
 export default function ShortBio({
   profilePic,
@@ -11,25 +13,25 @@ export default function ShortBio({
   origin,
 }) {
   return (
-    <Wrapper>
+    <Card>
       <ProfilePictureContainer>
         <img src={profilePic} alt="profilepicture" />
       </ProfilePictureContainer>
       <ProfileBioContainer>
-        <Name>
+        <Text>
           <h2>{name}</h2>
-        </Name>
+        </Text>
         <Bio>
           <ul>
-            <li>{species}</li>
-            <li>{status}</li>
-            <li>{gender}</li>
-            <li>{episodeCount}</li>
-            <li>{origin}</li>
+            <li><Text>{species}</Text></li>
+            <li><Text>{status}</Text></li>
+            <li><Text>{gender}</Text></li>
+            <li><Text>{episodeCount}</Text></li>
+            <li><Text>{origin}</Text></li>
           </ul>
         </Bio>
       </ProfileBioContainer>
-    </Wrapper>
+    </Card>
   )
 }
 

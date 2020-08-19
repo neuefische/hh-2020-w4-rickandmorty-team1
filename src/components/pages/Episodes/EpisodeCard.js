@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Card, Headline, Text, Description} from '../../styledComponents'
+import {Card, Headline, Text, Description} from '../../ui/card/styledCardComponents'
 
 function EpisodeCard ({title, date, episode}) {
   return (
