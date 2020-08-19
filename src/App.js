@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import LocationPage from './components/pages/Locations/LocationPage'
 import EpisodesPage from './components/pages/Episodes/EpisodesPage'
-import CharactersPage from './components/pages/CharactersPage'
+import CharactersPage from './components/pages/characters/CharactersPage'
 import styled from 'styled-components'
 import Header from './components/Header'
 
@@ -37,5 +37,5 @@ export default function App() {
 
 const Main = styled.main`
   padding-bottom: 70px;
-  padding-top: px;
+  padding-top: 80px;
 `

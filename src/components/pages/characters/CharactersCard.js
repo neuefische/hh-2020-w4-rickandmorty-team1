@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Card, Headline, Text, Description} from './ui/card/styledCardComponents'
+import {Card, Text} from '../../ui/card/styledCardComponents'
 
 
-export default function ShortBio({
+export default function CharactersCard({
   profilePic,
   name,
   species,

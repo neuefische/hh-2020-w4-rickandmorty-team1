@@ -6,6 +6,7 @@ export const Card = styled.div`
   margin: 0px 50px 20px 50px;
   padding: 20px 20px 20px 20px;
   width: 80%;
+  box-shadow: 5px 5px 10px black;
 `
 
 export const Headline = styled.h2`

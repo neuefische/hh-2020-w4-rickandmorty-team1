@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ShortBio from '../ShortBio'
+import CharactersCard from './CharactersCard'
 
 export default function CharactersPage({ setHeadline }) {
   const [character, setCharacter] = useState([])
@@ -12,7 +12,7 @@ export default function CharactersPage({ setHeadline }) {
       .then((data) =>
         setCharacter(
           data.results.map((character) => (
-            <ShortBio
+            <CharactersCard
               profilePic={character.image}
               name={character.name}
               species={character.species}

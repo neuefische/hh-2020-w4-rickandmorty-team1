@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import {Card, Headline, Text, Description} from '../../ui/card/styledCardComponents'
+import {Card, Text, Description} from '../../ui/card/styledCardComponents'
 
 
 export default function LocationCard({ name, type, dimension, residents }) {
