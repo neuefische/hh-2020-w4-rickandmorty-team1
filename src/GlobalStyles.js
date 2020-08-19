@@ -1,18 +1,30 @@
 import { createGlobalStyle } from 'styled-components'
+import img from './images/rick_and_morty_bg.jpg'
 
 export default createGlobalStyle`
 
 * {
     box-sizing: border-box;
 }
+
+html {
+
+    
+}
 body {
+    width: 200px;
     margin: 0;
     font-size: 112.5%;
-    background-image: url('./images/rick_and_morty_bg.jpg');
-    background-position: center; 
+    background: url('${img}');
     background-repeat: no-repeat; 
     background-size: cover;
     height: 100%;
-    padding: 20px 30px; 
+    
+    
+    
+}
+.App {
+    
+    
 }
 `
