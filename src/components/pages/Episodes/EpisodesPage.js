@@ -3,9 +3,11 @@ import Card from './EpisodeCard'
 import PagesNav from '../../PagesNav'
 import styled from 'styled-components'
 
-function EpisodesPage() {
+function EpisodesPage({ setHeadline }) {
   const [episodes, setEpisodes] = useState([])
   const [pages, setPages] = useState()
+
+  setHeadline('Episodes')
 
   useEffect(() => {
     fetchData(1)
