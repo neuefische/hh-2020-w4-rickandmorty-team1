@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Navigation from './components/Navigation'
 import LocationPage from './components/pages/locations/LocationPage'
 import EpisodesPage from './components/pages/episodes/EpisodesPage'
 import CharactersPage from './components/pages/characters/CharactersPage'
-import NavigationStartPages from './components/NavigationStartPage'
+import NavigationStartPage from './components/NavigationStartPage'
 import styled from 'styled-components'
 import Game from './components/pages/game/GamePage'
 import Header from './components/Header'
@@ -31,7 +30,7 @@ export default function App() {
               <Game setHeadline={setActivePage} />
             </Route>
             <Route path="/">
-              <NavigationStartPages />
+              <NavigationStartPage />
             </Route>
           </Switch>
         </Main>
