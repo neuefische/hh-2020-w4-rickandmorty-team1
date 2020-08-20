@@ -20,6 +20,7 @@ export default function CharactersPage({ setHeadline }) {
               gender={character.gender}
               episodeCount={character.episode.length}
               origin={character.origin.name}
+              key={character.name}
             />
           ))
         )
