@@ -4,6 +4,10 @@ import styled from 'styled-components'
 export default function Question({ character, loadNextCharacter }) {
   const [onClickFeedback, setOnClickFeedback] = useState()
 
+  useEffect(() => {
+    setOnClickFeedback('')
+  }, [character])
+
   function evaluateAnswer(event) {
     if (character.status === event.target.innerHTML) {
       setOnClickFeedback(
@@ -18,10 +22,8 @@ export default function Question({ character, loadNextCharacter }) {
         </Answer>
       )
 
-      loadNextCharacter()
-
       setTimeout(() => {
-        setOnClickFeedback()
+        loadNextCharacter()
       }, 2000)
     }
 
