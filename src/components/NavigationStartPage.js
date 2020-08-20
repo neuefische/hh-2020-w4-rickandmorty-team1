@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import NavButton from './NavButton/NavButton'
@@ -7,7 +7,11 @@ import imgCharacters from '../images/btn-characters.jpg'
 import imgLocataions from '../images/btn-locations.jpg'
 import imgDeadOrAlive from '../images/btn-game.jpeg'
 
-export default function NavigationStartPage() {
+export default function NavigationStartPage({ setHeadline }) {
+  useEffect(() => {
+    setHeadline('Rick and Morty')
+  })
+
   const style = { margin: '20px' }
   return (
     <NavStyled>
