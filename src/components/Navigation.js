@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
+import NavButton from './NavButton/NavButton'
+import img from '../images/btn-episodes2.jpg'
 
 export default function Navigation() {
   return (
@@ -8,17 +10,17 @@ export default function Navigation() {
       <NavLink exact activeClassName="isActive" to="/">
         Home
       </NavLink>
-      <NavLink activeClassName="isActive" to="/locations">
-        Locations
-      </NavLink>
       <NavLink activeClassName="isActive" to="/characters">
         Characters
       </NavLink>
       <NavLink activeClassName="isActive" to="/episodes">
         Episodes
       </NavLink>
+      <NavLink activeClassName="isActive" to="/locations">
+        Locations
+      </NavLink>
       <NavLink activeClassName="isActive" to="/game">
-        Game
+        Dead or Alive
       </NavLink>
     </NavStyled>
   )

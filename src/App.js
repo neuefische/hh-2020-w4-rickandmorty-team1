@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Navigation from './components/Navigation'
 import LocationPage from './components/pages/locations/LocationPage'
 import EpisodesPage from './components/pages/episodes/EpisodesPage'
 import CharactersPage from './components/pages/characters/CharactersPage'
+import NavigationStartPage from './components/NavigationStartPage'
 import styled from 'styled-components'
 import Game from './components/pages/game/GamePage'
 import Header from './components/Header'
@@ -27,16 +27,13 @@ export default function App() {
               <EpisodesPage setHeadline={setActivePage} />
             </Route>
             <Route path="/game">
-              <Game setHeadline={setActivePage}/>
+              <Game setHeadline={setActivePage} />
             </Route>
             <Route path="/">
-              <h1>Home</h1>
+              <NavigationStartPage setHeadline={setActivePage} />
             </Route>
-            <Route path="/"></Route>
           </Switch>
         </Main>
-
-        <Navigation />
       </div>
     </Router>
   )
