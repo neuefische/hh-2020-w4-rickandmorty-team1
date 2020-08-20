@@ -28,5 +28,10 @@ export default function CharactersPage({ setHeadline }) {
         )
       )
   }, [])
-  return <div>{character}</div>
+  return (
+    <div>
+      {character}
+      <Navigation />
+    </div>
+  )
 }

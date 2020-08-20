@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Question from './Question'
+import Navigation from '../../../components/Navigation'
 
 export default function GamePage() {
   const [currentCharacter, setcurrentCharacter] = useState({})
@@ -14,14 +15,20 @@ export default function GamePage() {
       })
   }, [])
 
-  function loadNextCharacter (ids = charactersLength) {
+  function loadNextCharacter(ids = charactersLength) {
     const randomCharacterId = Math.round(Math.random() * ids)
-    fetch(
-      'https://rickandmortyapi.com/api/character/' + randomCharacterId
-    )
+    fetch('https://rickandmortyapi.com/api/character/' + randomCharacterId)
       .then((res) => res.json())
       .then((data) => setcurrentCharacter(data))
   }
 
-  return <Question character={currentCharacter} loadNextCharacter={loadNextCharacter}/>
+  return (
+    <>
+      <Question
+        character={currentCharacter}
+        loadNextCharacter={loadNextCharacter}
+      />
+      <Navigation />
+    </>
+  )
 }
