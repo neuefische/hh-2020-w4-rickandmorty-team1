@@ -7,7 +7,9 @@ function EpisodesPage({ setHeadline }) {
   const [episodes, setEpisodes] = useState([])
   const [pages, setPages] = useState()
 
-  setHeadline('Episodes')
+  useEffect(() => {
+    setHeadline('Episodes')
+  })
 
   useEffect(() => {
     fetchData(1)
