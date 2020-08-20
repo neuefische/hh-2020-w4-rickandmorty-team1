@@ -20,7 +20,7 @@ export default function NavigationStartPage() {
       <NavLink style={style} activeClassName="isActive" to="/locations">
         <NavButton buttonLabel="LOCATIONS" borderPic={imgLocataions} />
       </NavLink>
-      <NavLink style={style} activeClassName="isActive" to="/locations">
+      <NavLink style={style} activeClassName="isActive" to="/game">
         <NavButton buttonLabel="DEAD OR ALIVE" borderPic={imgDeadOrAlive} />
       </NavLink>
     </NavStyled>
