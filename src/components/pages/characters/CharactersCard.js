@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Card, Text} from '../../ui/card/styledCardComponents'
-
+import { Card, Text } from '../../ui/card/styledCardComponents'
 
 export default function CharactersCard({
   profilePic,
@@ -23,11 +22,21 @@ export default function CharactersCard({
         </Text>
         <Bio>
           <ul>
-            <li><Text>{species}</Text></li>
-            <li><Text>{status}</Text></li>
-            <li><Text>{gender}</Text></li>
-            <li><Text>{episodeCount}</Text></li>
-            <li><Text>{origin}</Text></li>
+            <li>
+              <Text>{species}</Text>
+            </li>
+            <li>
+              <Text>{status}</Text>
+            </li>
+            <li>
+              <Text>{gender}</Text>
+            </li>
+            <li>
+              <Text>{episodeCount}</Text>
+            </li>
+            <li>
+              <Text>{origin}</Text>
+            </li>
           </ul>
         </Bio>
       </ProfileBioContainer>
@@ -35,24 +44,24 @@ export default function CharactersCard({
   )
 }
 
-const Wrapper = styled.section`
-  box-shadow: 5px 5px 10px black;
-  display: grid;
-  align-items: flex-start;
-  gap: 20px;
-  grid-template-columns: 1fr 2fr;
-  width: auto;
-  margin: 20px;
-  padding: 20px;
-  background-color: lightblue;
-`
+// const Wrapper = styled.section`
+//   box-shadow: 5px 5px 10px black;
+//   display: grid;
+//   align-items: flex-start;
+//   gap: 20px;
+//   grid-template-columns: 1fr 2fr;
+//   width: auto;
+//   margin: 20px;
+//   padding: 20px;
+//   background-color: lightblue;
+// `
 const ProfilePictureContainer = styled.div``
 const ProfileBioContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 `
-const Name = styled.div``
+// const Name = styled.div``
 
 const Bio = styled.div`
   ul {
