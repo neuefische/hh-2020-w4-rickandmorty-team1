@@ -29,7 +29,7 @@ const ButtonLabel = styled.div`
   height: 60px;
   opacity: 0.98;
 
-  background: #1c703f;
+  background: #a67e16;
   display: flex;
   justify-content: center;
   align-items: center;
