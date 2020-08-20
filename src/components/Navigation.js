@@ -17,6 +17,9 @@ export default function Navigation() {
       <NavLink activeClassName="isActive" to="/episodes">
         Episodes
       </NavLink>
+      <NavLink activeClassName="isActive" to="/game">
+        Game
+      </NavLink>
     </NavStyled>
   )
 }

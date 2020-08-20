@@ -4,7 +4,9 @@ import CharactersCard from './CharactersCard'
 export default function CharactersPage({ setHeadline }) {
   const [character, setCharacter] = useState([])
 
-  setHeadline('Characters')
+  useEffect(() => {
+    setHeadline('Characters')
+  })
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character/')
@@ -20,6 +22,7 @@ export default function CharactersPage({ setHeadline }) {
               gender={character.gender}
               episodeCount={character.episode.length}
               origin={character.origin.name}
+              key={character.name}
             />
           ))
         )
@@ -27,23 +30,3 @@ export default function CharactersPage({ setHeadline }) {
   }, [])
   return <div>{character}</div>
 }
-
-// function fetchCharacter() {
-//   return () => {
-//     fetch('https://rickandmortyapi.com/api/character/')
-//       .then((res) => res.json())
-//       .then((data) =>
-//         data.results.map((character) => (
-//           <ShortBio
-//             profilePic={character.image}
-//             name={character.name}
-//             species={character.species}
-//             status={character.status}
-//             gender={character.gender}
-//             episodeCount={character.episode.length}
-//             origin={character.origin.name}
-//           />
-//         ))
-//       )
-//   }
-// }
