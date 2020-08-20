@@ -35,24 +35,12 @@ export default function CharactersCard({
   )
 }
 
-const Wrapper = styled.section`
-  box-shadow: 5px 5px 10px black;
-  display: grid;
-  align-items: flex-start;
-  gap: 20px;
-  grid-template-columns: 1fr 2fr;
-  width: auto;
-  margin: 20px;
-  padding: 20px;
-  background-color: lightblue;
-`
 const ProfilePictureContainer = styled.div``
 const ProfileBioContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 `
-const Name = styled.div``
 
 const Bio = styled.div`
   ul {

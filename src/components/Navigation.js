@@ -20,6 +20,9 @@ export default function Navigation() {
         {/* <NavButton buttonLabel="EPISODES" borderPic={img} /> */}
         Episodes
       </NavLink>
+      <NavLink activeClassName="isActive" to="/game">
+        Game
+      </NavLink>
     </NavStyled>
   )
 }

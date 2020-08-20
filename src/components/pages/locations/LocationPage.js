@@ -4,9 +4,13 @@ import PagesNav from '../../PagesNav'
 import styled from 'styled-components'
 import Navigation from '../../../components/Navigation'
 
-export default function LocationPage() {
+export default function LocationPage({ setHeadline }) {
   const [locations, setlocations] = useState([])
   const [pages, setPages] = useState()
+
+  useEffect(() => {
+    setHeadline('Locations')
+  })
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/location/')
