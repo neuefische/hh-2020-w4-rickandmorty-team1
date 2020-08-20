@@ -2,37 +2,29 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { Card, Text, Description } from '../../ui/card/styledCardComponents'
 
-export default function LocationCard({
-  name,
-  type,
-  dimension,
-  residents,
-  onCreateSearch,
-}) {
+export default function LocationCard({ name, type, dimension, residents }) {
   return (
-    <>
-      <Card>
-        <Dimension>
-          <Description>Dimension</Description>
-          <Text>{dimension}</Text>
-        </Dimension>
+    <Card>
+      <Dimension>
+        <Description>Dimension</Description>
+        <Text>{dimension}</Text>
+      </Dimension>
 
-        <Type>
-          <Description>Type of location</Description>
-          <Text>{type}</Text>
-        </Type>
+      <Type>
+        <Description>Type of location</Description>
+        <Text>{type}</Text>
+      </Type>
 
-        <Name>
-          <Description>Name of location</Description>
-          <Text>{name}</Text>
-        </Name>
+      <Residents>
+        <Description>Characters in location</Description>
+        <Text>{residents}</Text>
+      </Residents>
 
-        <Residents>
-          <Description>Characters in location</Description>
-          <Text>{residents}</Text>
-        </Residents>
-      </Card>
-    </>
+      <Name>
+        <Description>Name of location</Description>
+        <Text>{name}</Text>
+      </Name>
+    </Card>
   )
 }
 
