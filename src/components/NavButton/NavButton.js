@@ -34,5 +34,5 @@ const ButtonLabel = styled.div`
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: black;
 `
