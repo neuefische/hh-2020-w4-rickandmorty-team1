@@ -2,20 +2,26 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import NavButton from './NavButton/NavButton'
-import img from '../images/btn-episodes2.jpg'
+import imgEpisodes from '../images/btn-episodes2.jpg'
+import imgCharacters from '../images/btn-characters.jpg'
+import imgLocataions from '../images/btn-locations.jpg'
+import imgDeadOrAlive from '../images/btn-game.jpeg'
 
-export default function Navigation() {
+export default function NavigationStartPage() {
   const style = { margin: '20px' }
   return (
     <NavStyled>
-      <NavLink style={style} exact activeClassName="isActive" to="/">
-        <NavButton buttonLabel="CHARACTERS" borderPic={img} />
+      <NavLink style={style} exact activeClassName="isActive" to="/characters">
+        <NavButton buttonLabel="CHARACTERS" borderPic={imgCharacters} />
+      </NavLink>
+      <NavLink style={style} activeClassName="isActive" to="/episodes">
+        <NavButton buttonLabel="EPISODES" borderPic={imgEpisodes} />
       </NavLink>
       <NavLink style={style} activeClassName="isActive" to="/locations">
-        <NavButton buttonLabel="EPISODES" borderPic={img} />
+        <NavButton buttonLabel="LOCATIONS" borderPic={imgLocataions} />
       </NavLink>
-      <NavLink style={style} activeClassName="isActive" to="/characters">
-        <NavButton buttonLabel="LOCATIONS" borderPic={img} />
+      <NavLink style={style} activeClassName="isActive" to="/locations">
+        <NavButton buttonLabel="DEAD OR ALIVE" borderPic={imgDeadOrAlive} />
       </NavLink>
     </NavStyled>
   )

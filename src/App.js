@@ -4,6 +4,7 @@ import Navigation from './components/Navigation'
 import LocationPage from './components/pages/Locations/LocationPage'
 import EpisodesPage from './components/pages/Episodes/EpisodesPage'
 import CharactersPage from './components/pages/characters/CharactersPage'
+import NavigationStartPages from './components/NavigationStartPage'
 import styled from 'styled-components'
 import Header from './components/Header'
 
@@ -25,11 +26,11 @@ export default function App() {
             <Route path="/episodes">
               <EpisodesPage setHeadline={setActivePage} />
             </Route>
-            <Route path="/"></Route>
+            <Route path="/">
+              <NavigationStartPages />
+            </Route>
           </Switch>
         </Main>
-
-        <Navigation />
       </div>
     </Router>
   )

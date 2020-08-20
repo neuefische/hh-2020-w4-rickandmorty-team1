@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Card from './EpisodeCard'
 import PagesNav from '../../PagesNav'
 import styled from 'styled-components'
+import Navigation from '../../../components/Navigation'
 
 function EpisodesPage({ setHeadline }) {
   const [episodes, setEpisodes] = useState([])
@@ -41,6 +42,7 @@ function EpisodesPage({ setHeadline }) {
     <CardsList>
       {episodesCards}
       <PagesNav pages={pages} onClick={fetchData} />
+      <Navigation />
     </CardsList>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import CharactersCard from './CharactersCard'
-
+import Navigation from '../../../components/Navigation'
 export default function CharactersPage({ setHeadline }) {
   const [character, setCharacter] = useState([])
 
@@ -25,7 +25,12 @@ export default function CharactersPage({ setHeadline }) {
         )
       )
   }, [])
-  return <div>{character}</div>
+  return (
+    <div>
+      {character}
+      <Navigation />
+    </div>
+  )
 }
 
 // function fetchCharacter() {
