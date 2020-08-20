@@ -21,13 +21,11 @@ export default function Question({ character, loadNextCharacter }) {
           <AnswerHeadline>Wrong Answer!</AnswerHeadline>
         </Answer>
       )
-
-      setTimeout(() => {
-        loadNextCharacter()
-      }, 2000)
     }
 
-    
+    setTimeout(() => {
+      loadNextCharacter()
+    }, 2000)
   }
 
   return (
