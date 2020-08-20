@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import img from './images/rick_and_morty_bg.jpg'
+import img from './images/rick-and-morty-bg-2.jpg'
 
 export default createGlobalStyle`
 
