@@ -17,7 +17,7 @@ export default function App() {
         <Main>
           <Switch>
             <Route path="/locations">
-              <LocationPage />
+              <LocationPage setHeadline={setActivePage} />
             </Route>
             <Route path="/characters">
               <CharactersPage setHeadline={setActivePage} />
