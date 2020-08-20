@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Card = styled.div` 
+export const Card = styled.div`
   background-color: #121212;
   border-radius: 20px;
   margin: 0px 50px 20px 50px;
@@ -20,6 +20,6 @@ export const Text = styled.span`
 `
 
 export const Description = styled.span`
-  color: #A0A0A0;
+  color: #a0a0a0;
   font-size: 13px;
 `
