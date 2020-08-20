@@ -1,25 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Card, Headline, Text, Description} from '../../ui/card/styledCardComponents'
+import {
+  Card,
+  Headline,
+  Text,
+  Description,
+} from '../../ui/card/styledCardComponents'
 
-function EpisodeCard ({title, date, episode}) {
+function EpisodeCard({ title, date, episode }) {
   return (
-  <CardBox>
-    <Title>
-      <Description>Titel</Description>
-      <Headline>{title}</Headline>
-    </Title>
-    
-    <Date>
-      <Description>Air Date</Description>
-      <Text>{date}</Text>
-    </Date>
-    
-    <Episode>
-      <Description>Episode</Description>
-      <Text>{episode}</Text>
-    </Episode>
-  </CardBox>
+    <CardBox>
+      <Title>
+        <Description>Titel</Description>
+        <Headline>{title}</Headline>
+      </Title>
+
+      <Date>
+        <Description>Air Date</Description>
+        <Text>{date}</Text>
+      </Date>
+
+      <Episode>
+        <Description>Episode</Description>
+        <Text>{episode}</Text>
+      </Episode>
+    </CardBox>
   )
 }
 
@@ -32,9 +37,9 @@ const CardBox = styled(Card)`
 `
 
 const Title = styled.div`
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    margin-bottom: 5px;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  margin-bottom: 5px;
 `
 
 const Date = styled.div`
@@ -46,5 +51,3 @@ const Episode = styled.div`
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 `
-
-

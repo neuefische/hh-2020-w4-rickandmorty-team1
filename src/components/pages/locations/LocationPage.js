@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Location from './LocationCard'
 import PagesNav from '../../PagesNav'
 import styled from 'styled-components'
-import Navigation from '../../../components/Navigation'
+import Navigation from '../../Navigation'
 
 export default function LocationPage({ setHeadline }) {
   const [locations, setlocations] = useState([])
