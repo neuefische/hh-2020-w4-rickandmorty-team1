@@ -5,10 +5,6 @@ export default function CharactersPage({ setHeadline }) {
   const [character, setCharacter] = useState([])
 
   useEffect(() => {
-    setHeadline('Characters')
-  })
-
-  useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character/')
       .then((res) => res.json())
       .then((data) =>
