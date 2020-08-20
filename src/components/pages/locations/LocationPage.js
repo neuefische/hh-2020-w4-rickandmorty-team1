@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Location from './LocationCard'
 import PagesNav from '../../PagesNav'
 import styled from 'styled-components'
-import Form from './Form'
+import FindRick from './FindLocation'
 
 export default function LocationPage({ setHeadline }) {
   const [locations, setlocations] = useState([])
@@ -13,13 +13,9 @@ export default function LocationPage({ setHeadline }) {
   })
 
   useEffect(() => {
-    fetch('https://rickandmortyapi.com/api/location/')
-      .then((res) => res.json())
-      .then((data) => {
-        setlocations(data.results)
-        setPages(data.info.pages)
-      })
+    fetchPageData(1)
   }, [])
+
   function fetchPageData(page) {
     fetch('https://rickandmortyapi.com/api/location/?page=' + page)
       .then((res) => res.json())
@@ -27,7 +23,9 @@ export default function LocationPage({ setHeadline }) {
         setlocations(data.results)
         setPages(data.info.pages)
       })
-    fetchPageData(1)
+      .catch((error) => {
+        console.error('Error:', error)
+      })
   }
 
   const LocationsCards = []
@@ -46,7 +44,7 @@ export default function LocationPage({ setHeadline }) {
 
   return (
     <CardsList>
-      <Form />
+      <FindRick />
       {LocationsCards}
       <PagesNav pages={pages} onClick={fetchPageData} />
     </CardsList>
