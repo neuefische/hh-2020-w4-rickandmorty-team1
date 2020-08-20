@@ -5,6 +5,7 @@ import LocationPage from './components/pages/locations/LocationPage'
 import EpisodesPage from './components/pages/episodes/EpisodesPage'
 import CharactersPage from './components/pages/characters/CharactersPage'
 import styled from 'styled-components'
+import Game from './components/pages/game/GamePage'
 import Header from './components/Header'
 
 export default function App() {
@@ -24,6 +25,12 @@ export default function App() {
             </Route>
             <Route path="/episodes">
               <EpisodesPage setHeadline={setActivePage} />
+            </Route>
+            <Route path="/game">
+              <Game setHeadline={setActivePage}/>
+            </Route>
+            <Route path="/">
+              <h1>Home</h1>
             </Route>
             <Route path="/"></Route>
           </Switch>
