@@ -30,7 +30,7 @@ export default function App() {
               <Game setHeadline={setActivePage} />
             </Route>
             <Route path="/">
-              <NavigationStartPage setHeadline={'Rick and Morty'} />
+              <NavigationStartPage setHeadline={setActivePage} />
             </Route>
           </Switch>
         </Main>
