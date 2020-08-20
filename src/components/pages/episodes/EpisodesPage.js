@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Card from './EpisodeCard'
 import PagesNav from '../../PagesNav'
 import styled from 'styled-components'
-import Navigation from '../../../components/Navigation'
+import Navigation from '../../Navigation'
 
 function EpisodesPage({ setHeadline }) {
   const [episodes, setEpisodes] = useState([])
