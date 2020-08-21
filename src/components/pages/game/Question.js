@@ -5,10 +5,6 @@ import FeedbackModal from './FeedbackModal'
 export default function Question({ character, loadNextCharacter }) {
   const [onClickFeedback, setOnClickFeedback] = useState()
 
-  useEffect(() => {
-    setOnClickFeedback('')
-  }, [character])
-
   function evaluateAnswer(event) {
     if (character.status === event.target.innerHTML) {
       setOnClickFeedback(
@@ -19,9 +15,10 @@ export default function Question({ character, loadNextCharacter }) {
         <FeedbackModal text="Wrong Answer!" type="failure"/>
       )
     }
+    loadNextCharacter()
 
     setTimeout(() => {
-      loadNextCharacter()
+      setOnClickFeedback('')
     }, 2000)
   }
 
