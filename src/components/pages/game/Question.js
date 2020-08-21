@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import FeedbackModal from './FeedbackModal'
 
 export default function Question({ character, loadNextCharacter }) {
   const [onClickFeedback, setOnClickFeedback] = useState()
@@ -11,15 +12,11 @@ export default function Question({ character, loadNextCharacter }) {
   function evaluateAnswer(event) {
     if (character.status === event.target.innerHTML) {
       setOnClickFeedback(
-        <Answer color="#26a69a">
-          <AnswerHeadline>Correct Answer!</AnswerHeadline>
-        </Answer>
+       <FeedbackModal text="Correct Answer!" type="success"/>
       )
     } else {
       setOnClickFeedback(
-        <Answer color="#e63946">
-          <AnswerHeadline>Wrong Answer!</AnswerHeadline>
-        </Answer>
+        <FeedbackModal text="Wrong Answer!" type="failure"/>
       )
     }
 
@@ -40,24 +37,6 @@ export default function Question({ character, loadNextCharacter }) {
     </QuestionBox>
   )
 }
-
-const Answer = styled.div`
-  background-color: ${(props) => props.color};
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
-  width: 100%;
-  height: 100%;
-  z-index: 200;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  border-radius: 20px;
-`
-
-const AnswerHeadline = styled.h1`
-  font-size: 40px;
-  color: white;
-`
 
 const QuestionBox = styled.div`
   display: grid;
