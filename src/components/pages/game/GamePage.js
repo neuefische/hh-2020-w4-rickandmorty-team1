@@ -7,10 +7,6 @@ export default function GamePage({ setHeadline }) {
   const [charactersLength, setCharactersLength] = useState()
 
   useEffect(() => {
-    setHeadline('Dead or Alive')
-  })
-
-  useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character')
       .then((res) => res.json())
       .then((data) => {

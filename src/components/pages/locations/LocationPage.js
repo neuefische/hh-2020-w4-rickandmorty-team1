@@ -9,10 +9,6 @@ export default function LocationPage({ setHeadline }) {
   const [pages, setPages] = useState()
 
   useEffect(() => {
-    setHeadline('Locations')
-  })
-
-  useEffect(() => {
     fetch('https://rickandmortyapi.com/api/location/')
       .then((res) => res.json())
       .then((data) => {

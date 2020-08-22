@@ -9,10 +9,6 @@ function EpisodesPage({ setHeadline }) {
   const [pages, setPages] = useState()
 
   useEffect(() => {
-    setHeadline('Episodes')
-  })
-
-  useEffect(() => {
     fetchData(1)
   }, [])
 
